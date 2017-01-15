@@ -33,6 +33,7 @@ public class Client extends Thread {
     private int port = 6666;
     private InputStream in;
     private OutputStream out;
+    public boolean liveFeed=true;
 
     Client() {
 
@@ -41,46 +42,11 @@ public class Client extends Thread {
     public void run(){
         serverName = MainActivity.jIP.getText().toString();
         try {
-            while(true) {
+            while(liveFeed) {
                 socket = new Socket(serverName, port);
                 in = socket.getInputStream();
                 out = socket.getOutputStream();
-                //out.write(0);
-                //out.flush();
-                //DataInputStream din = new DataInputStream(in);
-                //DataOutputStream dout = new DataOutputStream(out);
 
-
-                //while(true) {
-                //byte[] frameBytesLenBytes = new byte[4];
-                //in.read(frameBytesLenBytes);
-                //Log.d("tobhi", Arrays.toString(frameBytesLenBytes));
-                //ByteBuffer bb = ByteBuffer.allocate(4);
-                //bb.put(frameBytesLenBytes);
-                //int frameBytesLen = bb.getInt(0);
-                //Log.d("debuggg", String.valueOf(frameBytesLen));
-                //byte[] frameBytes =new byte[frameBytesLen];
-
-                /*ByteArrayOutputStream bout = new ByteArrayOutputStream();
-                Log.d("DEBUG2", "BLAHBLAH");
-                //int off = 0;
-                while (true) {
-                    Log.d("DEBUG3", "BLAHBLAH");
-                    //if (off >= frameBytesLen) break;
-                    byte[] readBytes = new byte[8192];
-                    //int lenRead = in.read(frameBytes, off, Math.min(8192, frameBytesLen-off));
-                    int lenRead  = in.read(readBytes);
-                    if (lenRead == -1) break;
-                    bout.write(readBytes);
-                    Log.d("DEBUG4", "BLAHBLAH");
-                    //off += 8192;
-                }
-
-                byte[] frameBytes = bout.toByteArray();
-                Log.d("frameBytesLength", String.valueOf(frameBytes.length));
-                Log.d("frameBytes", Arrays.toString(frameBytes));
-                MainActivity.frame = BitmapFactory.decodeByteArray(frameBytes, 257, frameBytes.length-257);
-                MainActivity.frameChanged = true;*/
                 MainActivity.frame = BitmapFactory.decodeStream(new FlushedInputStream(in));
                 MainActivity.frameChanged = true;
                 socket.close();
