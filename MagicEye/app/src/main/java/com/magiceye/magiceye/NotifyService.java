@@ -107,7 +107,8 @@ public class NotifyService extends Service {
                         InputStream in = client.getInputStream();
                         OutputStream out = client.getOutputStream();
                         int p =in.read();
-                        Log.d("BYTEREAD", "1");
+                        System.out.println(p);
+                        //Log.d("BYTEREAD", "1");
                         if (p == 1) {
                             notificationManager.notify(MY_NOTIFICATION_ID, notifBuilder.build());
                         }

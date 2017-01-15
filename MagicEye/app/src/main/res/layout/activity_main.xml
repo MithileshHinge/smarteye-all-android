@@ -16,10 +16,11 @@
         android:text=""
         android:id="@+id/xIP"
         />
-    <Button
+    <ToggleButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Start"
+        android:textOn="Notification"
+        android:textOff="Notification"
         android:id="@+id/xB"
         android:layout_below="@+id/xIP"
         android:layout_alignParentLeft="true"
@@ -30,22 +31,18 @@
         android:layout_height="match_parent"
         android:id="@+id/xIV"
         android:layout_below="@+id/xB"
-        android:layout_above="@+id/xBStop"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"/>
-    <Button
+
+    <ToggleButton
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Stop Notification Service"
-        android:layout_alignParentBottom="true"
-        android:id="@+id/xBStop"
-        android:visibility="gone"/>
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Live Feed"
+        android:textOn="Live Feed"
+        android:textOff="LiveFeed"
         android:id="@+id/xL"
         android:layout_alignTop="@+id/xB"
         android:layout_centerHorizontal="true" />
+
+
 </RelativeLayout>
