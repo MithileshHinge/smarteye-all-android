@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "C:\\Users\\Sibhali\\Desktop\\MagicEye\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v9\\ic_warn.png",
+        "source": "C:\\Users\\Sibhali\\Desktop\\MagicEye\\app\\src\\main\\res\\drawable-xxhdpi-v9\\ic_warn.png"
+    },
+    {
+        "merged": "C:\\Users\\Sibhali\\Desktop\\MagicEye\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v9\\ic_notif.png",
+        "source": "C:\\Users\\Sibhali\\Desktop\\MagicEye\\app\\src\\main\\res\\drawable-xxhdpi-v9\\ic_notif.png"
+    },
+    {
+        "merged": "C:\\Users\\mithileshhinge\\AndroidStudioProjects\\MagicEye\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v9\\ic_notif.png",
+        "source": "C:\\Users\\mithileshhinge\\AndroidStudioProjects\\MagicEye\\app\\src\\main\\res\\drawable-xxhdpi-v9\\ic_notif.png"
+    }
+]
